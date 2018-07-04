@@ -1,0 +1,462 @@
+/* <style media="screen"> */
+body {
+  font: 15px/1.5 'Lato', sans-serif;
+  color: #797979;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+  /*The header includes the logo, nav and search box*/
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  min-height: 70px;
+  background-color: white;
+}
+
+header a {
+  color: grey;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+header a:hover {
+  color: #EE534F;
+  font-weight: bold;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 7px 10px 0 20px;
+}
+
+header img {
+  float: left;
+  margin-left: 50px;
+}
+
+header nav {
+  float: left;
+}
+
+ul {
+  margin: 0;
+}
+
+header input {
+  margin-top: 8px;
+  height: 30px;
+}
+
+.image {
+  margin-left: 80px;
+}
+
+.header_image {
+  margin-left: 154px;
+  margin-top: 43px;
+}
+
+.pageheader {
+  height: 300px;
+  padding:50px;
+}
+
+.pageheader h1 {
+  margin-top: 100px;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pageheader p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+#intro {
+  display: inline;
+  width: 100%;
+}
+
+#intro div {
+  width: 40%;
+  float: left;
+  margin-top: 50px;
+  word-wrap: break-word;
+}
+
+#left {
+  margin-left: 100px;
+  margin-right: 30px;
+ }
+
+@media(max-width: 800px) {
+#intro div {
+  width: 100%;
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin-top: 70px;
+  background-color: #fff;
+}
+ div #left {
+   width: 100%;
+   margin-left: none;
+   margin-top: 70px;
+ }
+
+ #intro img {
+   width: 100%;
+ }
+}
+
+
+button {
+  color: white;
+  font-size: 15px;
+  background-color: #EE534F;
+  width: 100px;
+  padding: 5px;
+  border-radius: 4px;
+  border-color: #EE534F;
+}
+
+button:hover {
+background:lighten(#ED524E, 50%);
+width: 150px;
+/* -webkit-transition: all 100ms ease; */
+}
+
+div #description {
+  display: inline;
+  margin-top: 50px;
+  width: 100%;
+  float: left;
+}
+
+#description img{
+  width: 50%;
+  margin-top: 50px;
+  margin-left: 4px;
+}
+
+#description table {
+  width: 30%;
+  margin-left: 860px;
+  margin-top: -400px;
+}
+
+.codeteam {
+  margin-top: 129px;
+  margin-bottom: 50px;
+}
+
+.teaminfo  {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  padding-top: 20px;
+  /*margin:0px 30px;*/
+  width: 100%;
+}
+
+.teaminfo img {
+  /*padding: 20px;*/
+}
+
+.teaminfo p {
+  padding-top: 15px;
+  padding-left: 20px;
+  width: 80%;
+  word-wrap: break-word;
+}
+
+@media(max-width: 800px){
+  div .codeteam {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media(max-width: 800px){
+  div .teaminfo {
+    flex-flow: wrap;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media(max-width: 800px) {
+div #description {
+  display: block;
+  width: 100%;
+}
+#description img {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+#description table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 14px;
+}
+}
+
+.blkborder {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  background-color: black;
+  margin-top: 5px;
+  min-height: auto;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+
+canvas {
+  display: inline-block;
+  background-color: black;
+  padding: 50px 50px 0 56px;
+}
+
+#count {
+  height: 430px;
+  width: 100%;
+  height: 350px;
+  padding-left: 30px;
+  background-color: black;
+}
+
+
+#count p {
+  color: #fff;
+  margin: 5px 0px 10px 50px;
+  /*font-size: 12px;*/
+
+  text-align: center;
+}
+
+.subscribe {
+  text-align: center;
+  margin: 50px 0px 50px 0px;
+}
+
+/*carousel styling*/
+#partners{
+  width: 10000%;
+  margin-top: 0;
+}
+/*this styling works with JQuery and regulates the speed and loop of the carousel*/
+#partners.ready > *{
+display: inline-block;
+float:left;
+overflow: hidden;
+
+webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+
+
+-webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+
+-webkit-animation-delay: 1s;
+animation-delay: 1s;
+
+
+-webkit-animation-duration: 20s;
+animation-duration: 20s;
+
+
+-webkit-animation-name: marginator;
+animation-name: marginator;
+
+
+
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+}
+/*the carousel will pause on hover and the movement is regulated here*/
+#partners:hover > *{
+
+
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes marginator {
+  0% {
+    -webkit-transform: translate(0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+  100% {
+    -webkit-transform: translate(-100%,0);
+    -webkit-transform: translate3d(-100%,0,0);
+  }
+}
+
+@keyframes marginator {
+  0% {
+
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  100% {
+
+
+    -webkit-transform: translate(-100%,0);
+    transform: translate(-100%,0);
+
+
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+  }
+}
+/*This wrapper holds the carousel*/
+#partners-wrapper{
+  overflow: hidden;
+  background-color: black;
+  margin-left: -100px;
+  width: 1450px;
+  height: 141px;
+}
+
+#partners img {
+  margin: 5px;
+  margin-top: 0;
+}
+
+
+footer{
+  margin: 70px 0px 30px 20px;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 180px;
+}
+
+footer ul li{
+  list-style-type: none;
+}
+
+footer div{
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+footer a{
+  text-decoration: none;
+  color: #EE534F;
+}
+
+@media(max-width: 800px) {
+  footer {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bottomfooter {
+  width: 100%;
+  background-color: #EE534F;
+  color: #fff;
+  height: 40px;
+  padding: 3px;
+}
+
+.bottomfooter a{
+  color: #fff;
+  padding: 5px;
+}
+
+@media(max-width: 800px) {
+div .blkborder {
+  display: none;
+}
+}
+
+
+@media(max-width: 800px) {
+canvas {
+  display: none;
+}
+div .blkborder{
+  background-color: #fff;
+}
+}
+
+@media(max-width: 800px) {
+body {
+  width: 100%;
+  display: block;
+  padding: 0;
+  background-color: #fff;
+}
+}
+
+@media(max-width: 800px) {
+body img{
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+}
+
+@media(max-width: 800px) {
+  header {
+    border-bottom: none;
+  }
+header li{
+  width: 100%;
+  display: block;
+  background-color: #EE534F;
+  border: 1px solid lightgrey;
+}
+header img {
+  width:100%;
+  height: auto;
+  padding: 0px;
+ }
+ header input {
+   display: none;
+ }
+ header a {
+   color: lightgrey;
+   padding-bottom: 3px;
+ }
+ header a:hover {
+   color: darkgrey;
+ }
+}
+
+.company {
+  margin-left: 281px;
+  margin-top: -150px;
+}
+
+ .help {
+   margin-left: 498px;
+   margin-top: -261px;
+ }
+
+ .contact {
+   margin-top: -79px;
+ }

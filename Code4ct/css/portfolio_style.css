@@ -1,0 +1,399 @@
+/* <style media="screen"> */
+body {
+  font: 17px/1.5 'Lato', sans-serif;
+  color: #797979;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  overflow-x: hidden;
+  word-wrap: break-word;
+}
+  /*The header includes the logo, nav and search box*/
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  padding-top: 30px;
+  margin-bottom: 50px;
+  min-height: 70px;
+  background-color: white;
+}
+
+header a {
+  color: grey;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+header a:hover {
+  color: #EE534F;
+  font-weight: bold;
+}
+
+header li {
+  float: left;
+  display: inline;
+  padding: 7px 10px 0 20px;
+}
+
+header img {
+  float: left;
+  margin-left: 50px;
+}
+
+header nav {
+  float: left;
+}
+
+ul {
+  margin: 0;
+}
+
+header input {
+  margin-top: 8px;
+  height: 30px;
+}
+
+.pageheader {
+  width: 100%;
+  height: 300px;
+  color: #797979;
+  background-color: #EEEEEE;
+  padding:50px;
+}
+
+.pageheader h1 {
+  margin-top: 100px;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.pageheader p {
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+}
+
+.photos {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin-top: 10px;
+  line-height: 150px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+    /* Style the Image Used to Trigger the Modal */
+.galleryImg {
+ border-radius: 5px;
+ cursor: zoom-in;
+ transition: 0.3s;
+}
+
+.galleryImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+ display: none; /* Hidden by default */
+ position: fixed; /* Stay in place */
+ z-index: 1; /* Sit on top */
+ padding-top: 100px; /* Location of the box */
+ left: 0;
+ top: 0;
+ width: 100%; /* Full width */
+ height: 100%; /* Full height */
+ overflow: auto; /* Enable scroll if needed */
+ background-color: rgb(0,0,0); /* Fallback color */
+ background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+ margin: auto;
+ display: block;
+ width: 80%;
+ max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+ margin: auto;
+ display: block;
+ width: 80%;
+ max-width: 700px;
+ text-align: center;
+ color: #ccc;
+ padding: 10px 0;
+ height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption {
+ -webkit-animation-name: zoom;
+ -webkit-animation-duration: 0.6s;
+ animation-name: zoom;
+ animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+ from {-webkit-transform:scale(0)}
+ to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+ from {transform:scale(0)}
+ to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+ position: absolute;
+ top: 15px;
+ right: 35px;
+ color: #f1f1f1;
+ font-size: 40px;
+ font-weight: bold;
+ transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+ color: #bbb;
+ text-decoration: none;
+ cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+ .modal-content {
+     width: 100%;
+ }
+}
+
+.blkborder {
+  display: flex;
+  flex-flow: row;
+  justify-content: flex-start;
+  background-color: black;
+  margin-top: 50px;
+  min-height: auto;
+  width: 100%;
+  color: #fff;
+}
+
+/*carousel styling*/
+#partners{
+  width: 10000%;
+}
+/*this styling works with JQuery and regulates the speed and loop of the carousel*/
+#partners.ready > *{
+display: inline-block;
+float:left;
+overflow: hidden;
+
+webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+
+
+-webkit-animation-timing-function: linear;
+animation-timing-function: linear;
+
+-webkit-animation-delay: 1s;
+animation-delay: 1s;
+
+
+-webkit-animation-duration: 20s;
+animation-duration: 20s;
+
+
+-webkit-animation-name: marginator;
+animation-name: marginator;
+
+
+
+-webkit-animation-iteration-count: infinite;
+animation-iteration-count: infinite;
+}
+/*the carousel will pause on hover and the movement is regulated here*/
+#partners:hover > *{
+
+
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;
+}
+
+@-webkit-keyframes marginator {
+  0% {
+    -webkit-transform: translate(0,0);
+    -webkit-transform: translate3d(0,0,0);
+  }
+  100% {
+    -webkit-transform: translate(-100%,0);
+    -webkit-transform: translate3d(-100%,0,0);
+  }
+}
+
+@keyframes marginator {
+  0% {
+
+    -webkit-transform: translate(0,0);
+    transform: translate(0,0);
+
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+  }
+  100% {
+
+
+    -webkit-transform: translate(-100%,0);
+    transform: translate(-100%,0);
+
+
+    -webkit-transform: translate3d(-100%,0,0);
+    transform: translate3d(-100%,0,0);
+  }
+}
+/*This wrapper holds the carousel*/
+#partners-wrapper{
+  overflow: hidden;
+  background-color: black;
+  margin-left: -100px;
+  width: 1450px;
+  height: 141px;
+}
+
+#partners img {
+  margin: 5px;
+}
+
+footer{
+  margin: 70px 0px 30px 20px;
+  font-size: 15px;
+  text-align: left;
+  margin-left: 180px;
+}
+
+footer ul li{
+  list-style-type: none;
+}
+
+footer div{
+  width: 200px;
+  margin-bottom: 20px;
+}
+
+footer a{
+  text-decoration: none;
+  color: #EE534F;
+}
+
+@media(max-width: 800px) {
+  footer {
+    display: block;
+    width: 100%;
+  }
+}
+
+.bottomfooter {
+  width: 100%;
+  background-color: #EE534F;
+  color: #fff;
+  height: 40px;
+  padding: 3px;
+}
+
+.bottomfooter a{
+  color: #fff;
+  padding: 5px;
+}
+
+.company {
+  margin-left: 281px;
+  margin-top: -150px;
+}
+
+ .help {
+   margin-left: 498px;
+   margin-top: -261px;
+ }
+
+ .contact {
+   margin-top: -79px;
+ }
+
+@media(max-width: 800px) {
+  div #partners {
+    display: none;
+}
+}
+
+@media(max-width: 800px) {
+body {
+  width: 100%;
+  display: block;
+  padding: 0;
+  background-color: #fff;
+}
+}
+
+@media(max-width: 800px) {
+body img{
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+}
+
+@media(max-width: 800px) {
+  header {
+    border-bottom: none;
+  }
+header li{
+  width: 100%;
+  display: block;
+  background-color: #EE534F;
+  border: 1px solid lightgrey;
+}
+header img {
+  width:100%;
+  height: auto;
+  padding: 0px;
+ }
+ header input {
+   display: none;
+ }
+ header a {
+   color: lightgrey;
+   padding-bottom: 3px;
+ }
+ header a:hover {
+   color: darkgrey;
+ }
+}
+
+@media(max-width: 800px) {
+  div #contactform {
+    width: 100%;
+  }
+  div input {
+    width: 100%;
+  }
+  div textarea {
+    width: 100%;
+  }
+}
+
+@media(max-width: 800px) {
+  div #contactinfo {
+    width: 100%;
+    word-wrap: break-word;
+  }
+}
